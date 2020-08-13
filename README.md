@@ -1,2 +1,2 @@
 # Coding
-daily code
+daily coding
