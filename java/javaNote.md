@@ -27,3 +27,11 @@ int[] arr = new int[128];// 所有元素自动初始化为0
 java 常用包，
 
 java.util，其中包括各种数据结构，Map，Set，Queue，ArrayList等
+
+---
+
+java input command line
+
+Scanner input=new Scanner(System.in);
+System.out.print("请输入1个字符串：");
+String s=input.nextLine();

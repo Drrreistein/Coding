@@ -1,0 +1,27 @@
+
+TouTiao Recruit:
+hardness of each three questions should meet the listed requirements:
+a <=b <= c
+b - a <= 10
+c - b <= 10
+
+in total n open topics were drawn. 
+now we want these n problems can be distributed 
+to several test rounds(1 round or more rounds, 
+each question must be use and can only be used once), 
+each test round includes three problems.
+however, due to the limitation of the above conditions, 
+there will be some tests which have not enough 3 problem, 
+so staff in TouTiao will need to draw some more questions 
+in appropriate difficulty to meet the requirements
+you should calculate the minimum we need to out a few problem
+
+input:
+number of questions
+hard index of each question
+example input:
+4
+20 35 23 40
+
+output, for example:
+2
