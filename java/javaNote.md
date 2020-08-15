@@ -35,3 +35,47 @@ java input command line
 Scanner input=new Scanner(System.in);
 System.out.print("请输入1个字符串：");
 String s=input.nextLine();
+
+int numberOfPoints=input.nextInt();
+
+input.hasNext(); // return boolean, 可作为while的判断，用来多组数据的输入
+
+---
+
+java round
+
+Math.round(11/2) = 5; // 四舍五入, 返回int类型
+
+Math.floor(11/2) = 5.0; // round down, 返回double类型，
+
+Math.ceil(11/2)=5.0;  // round up, 返回double类型
+
+Math.ceil((double)11/2) = 6.0; // you must convert (int)11 to (double)11 first
+
+---
+
+Arrays.copyOfRange(arr, i, j)
+
+---
+
+java - for loop, another way to get the element of an array.
+
+int[] arr = {1, 2, 3 };
+
+**for(int i : arr){}**
+
+---
+
+```java
+// 这是回溯算法的一道题
+List<Integer> l1 = new ArrayList<>();
+/*
+			 * 此处不能直接简单的使用res.add(path), 因为path的值是动态变化的，
+			 * 当res里的element一直指向path这个值，每次add之后，
+			 * res里新旧element会被刷新成最新的path值
+			*/
+for(int i = 0; i < path.size(); i++) {l1.add(path.get(i));}
+
+res.add(l1);  // ?? 为什么不能把所有path保存到一个大的结构里呢
+```
+

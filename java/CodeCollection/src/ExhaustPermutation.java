@@ -9,11 +9,12 @@ import java.util.ArrayList;
 public class ExhaustPermutation{
 	
 	static TreeNode root = new TreeNode();
+	static ArrayList<ArrayList<String>> list = new ArrayList<>();
 	
 	// permutate, to build a tree
 	private static void permutation(TreeNode rootNode, ArrayList<String> arr, ArrayList<String> origin) {
 		int n = arr.size(); // length of the ArrayList
-		if(rootNode != null) {
+		if(n != 0) {
 			for(int i=0; i< n; i++) {
 				TreeNode node = new TreeNode(arr.get(i));
 				rootNode.children.add(node);
@@ -23,19 +24,23 @@ public class ExhaustPermutation{
 				arr.add(i, x);
 			}
 		}
+		else {
+			System.out.println(",");
+		}
 	}
 	
-	// depth first search, to show all combinations, but not quite successful
-	public static void dfs(TreeNode node) {
+	// depth first search, to display all combinations, but not quite successful
+	public static void dfs(TreeNode node, ArrayList<String> path) {
 		
 		if(node.children.isEmpty()) {
-			System.out.println(" ");
+			System.out.println(path);
 		}
 		else {
 			for(TreeNode node2 : node.children) {
-				System.out.print(node2.value);
-				dfs(node2);
-			
+				path.add(node2.value);
+//				System.out.print(node2.value);
+				dfs(node2, path);
+				path.remove(path.size()-1);
 			}
 		}
 	}
@@ -47,12 +52,11 @@ public class ExhaustPermutation{
 			al.add(s1.substring(i, i+1));
 		}
 		
-
 		permutation(root, al, al);
 		System.out.println("");
-		dfs(root);
-		System.out.print(root);
+		ArrayList<String> path = new ArrayList<String>();
+		dfs(root, path);
+//		System.out.print(list);
 	}
 	
-
 }
