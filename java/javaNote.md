@@ -79,3 +79,20 @@ for(int i = 0; i < path.size(); i++) {l1.add(path.get(i));}
 res.add(l1);  // ?? 为什么不能把所有path保存到一个大的结构里呢
 ```
 
+---
+
+java字符串String用双引号，"a"
+
+java字符char用单引号，‘a’
+
+---
+
+error, never command lines directly after a "return "
+
+---
+
+java, check 2 string equals or not
+
+1. don't use s1==s2, because, not only the content but also their IDs must equal, then return true
+2. use, s1.equals(s2), when contents equal, it'll return true. 
+
