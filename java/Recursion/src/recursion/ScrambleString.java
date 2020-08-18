@@ -43,32 +43,29 @@ public class ScrambleString {
 		  int n1 = s1.length(); 
 		  int n2 = s2.length();
 	  
-	  if(n1 == n2 && n1==1) { 
+	  if(n1 == n2) { 
 		  if(s1.equals(s2)) { 
-			  return true; } } 
-	  else if(n1 == n2 && n1>1) { 
-		  if(s1.equals(s2)) { 
-			  return true; } 
+			  return true; }  
 		  else { // partition string to two substrings 
-			  String s11 = s1.substring(0, n1/2); 
-			  String s12 = s1.substring(n1/2, n1); // System.out.println(s11 +" "+ s12); 
-			  String s21 = s2.substring(0, n2/2); 
-			  String s22 = s2.substring(n2/2, n2); //
-			  System.out.println(s21 +" "+ s22);
+
+			  for(int i=1; i<n1; i++) { // find all scramble-substring combi using for-loop 
+				  boolean res1 = isScramble(s1.substring(0, i), s2.substring(0, i)) 
+						  && isScramble(s1.substring(i), s2.substring(i));
+				  System.out.println(s1.substring(0, i) +" "+ s2.substring(0, i) + " " 
+				  + s1.substring(i) +" "+ s2.substring(i) +" "+res1); 
+				  
+				  boolean res2 = isScramble(s1.substring(0, i), s2.substring(s2.length()-i)) 
+						  && isScramble(s1.substring(i), s2.substring(0,s2.length()-i)); 
+				  System.out.println(s1.substring(0, i) +" "+ s2.substring(s2.length()-i) + " " 
+						  + s1.substring(i) +" "+ s2.substring(0,s2.length()-i) +" "+res2); 
+				  if(res1 || res2) {return true;} }
+			  
+			  }
 	  
-	  
-			  boolean res1 = isScramble(s11, s22) && isScramble(s21, s12);
-	  
-			  System.out.println(s11 +" "+ s12 + " " + s21 +" "+ s22 +" "+res1); 
-			  boolean res2 = isScramble(s11, s21) && isScramble(s12, s22); 
-			  System.out.println(s11 +" "+ s21 + " " + s12 +" "+ s22 +" "+res2); 
-			  if(res1 || res2) {return true;} }
 	  }
 	  
 	  return false; }
-	 
-	  
-	  
+
 	/**
 	 * @param args
 	 */

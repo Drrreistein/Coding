@@ -96,3 +96,26 @@ java, check 2 string equals or not
 1. don't use s1==s2, because, not only the content but also their IDs must equal, then return true
 2. use, s1.equals(s2), when contents equal, it'll return true. 
 
+---
+
+java display matrix and array
+
+```java
+public static void displayMatrix(int[][] matr) {
+	int len = matr.length;
+	for(int i=0; i<len; i++) {
+		displayArray(matr[i]);
+	}
+	System.out.println();
+}
+
+public static void displayArray(int[] arr) {
+	int len = arr.length;
+	System.out.print("[\t");
+	for(int i=0; i<len; i++) {
+		System.out.print(arr[i] + "\t");
+	}
+	System.out.print("]");
+	System.out.println();
+}
+```

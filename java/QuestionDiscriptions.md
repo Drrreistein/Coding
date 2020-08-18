@@ -31,10 +31,18 @@ S = "ABCDE", T="AEC"， 返回0。
 
 ### ScrambleString (not finished)
 
-判断s2是否为s1的乱序子串
+判断s2是否为s1的乱序子串（不知道怎么用dp的方法）
+
+### WordBreak
+
+判断字符串s是否可有字典dict中的单词组合而成
 
 ## Recursion
 
-### ScrambleString (not finished)
+### ScrambleString (not pefect run in nowcoder)
 
 判断s2是否为s1的乱序子串
+
+### WordBreak
+
+判断字符串s是否可有字典dict中的单词组合而成， not succeed in nowcoder because running out of time
