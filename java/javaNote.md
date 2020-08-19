@@ -118,4 +118,14 @@ public static void displayArray(int[] arr) {
 	System.out.print("]");
 	System.out.println();
 }
+
+	public static void displayString(String s) {
+		int len = arr.length;
+		System.out.print("[\t");
+		for(int i=0; i<len; i++) {
+			System.out.print(arr[i] + "\t");
+		}
+		System.out.print("]");
+		System.out.println();
+	}
 ```

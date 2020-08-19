@@ -37,6 +37,16 @@ S = "ABCDE", T="AEC"， 返回0。
 
 判断字符串s是否可有字典dict中的单词组合而成
 
+### MinCandy
+
+给一排不同ratings的孩子分糖，要求发的糖最少。两个方法
+
+### PartitionPalindrome (not finished)
+
+分割字符串s为多个回文串的最简分割方法，return int
+
+（一开始的方向就错了。。。
+
 ## Recursion
 
 ### ScrambleString (not pefect run in nowcoder)
@@ -46,3 +56,4 @@ S = "ABCDE", T="AEC"， 返回0。
 ### WordBreak
 
 判断字符串s是否可有字典dict中的单词组合而成， not succeed in nowcoder because running out of time
+

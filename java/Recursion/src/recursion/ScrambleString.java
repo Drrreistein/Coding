@@ -19,52 +19,41 @@ package recursion;
  *
  */
 public class ScrambleString {
-	/**
-	 * nowcoder version 
-	*/	
-	/*
-	 * public static boolean isScramble(String s1, String s2) { if(s1 == s2) return
-	 * true; int[] c = new int[26]; for(int i=0;i<s1.length();i++) { c[s1.charAt(i)
-	 * -'a']++; c[s2.charAt(i) -'a']--; } for(int i=0;i<26;i++) if(c[i] != 0) return
-	 * false;
-	 * 
-	 * for(int i=1;i<s1.length();i++) { if(isScramble(s1.substring(0,i),
-	 * s2.substring(0,i)) && isScramble(s1.substring(i), s2.substring(i))) return
-	 * true; if(isScramble(s1.substring(0,i), s2.substring(s2.length()-i)) &&
-	 * isScramble(s1.substring(i), s2.substring(0,s2.length()-i))) return true; }
-	 * return false; }
-	 */
+
 	/**
 	 * my verison
-	
-	*/
-	
-	  public static boolean isScramble(String s1, String s2) { 
-		  int n1 = s1.length(); 
-		  int n2 = s2.length();
-	  
-	  if(n1 == n2) { 
-		  if(s1.equals(s2)) { 
-			  return true; }  
-		  else { // partition string to two substrings 
+	 * 
+	 */
+	public static boolean isScramble(String s1, String s2) {
+		int n1 = s1.length();
+		int n2 = s2.length();
 
-			  for(int i=1; i<n1; i++) { // find all scramble-substring combi using for-loop 
-				  boolean res1 = isScramble(s1.substring(0, i), s2.substring(0, i)) 
-						  && isScramble(s1.substring(i), s2.substring(i));
-				  System.out.println(s1.substring(0, i) +" "+ s2.substring(0, i) + " " 
-				  + s1.substring(i) +" "+ s2.substring(i) +" "+res1); 
-				  
-				  boolean res2 = isScramble(s1.substring(0, i), s2.substring(s2.length()-i)) 
-						  && isScramble(s1.substring(i), s2.substring(0,s2.length()-i)); 
-				  System.out.println(s1.substring(0, i) +" "+ s2.substring(s2.length()-i) + " " 
-						  + s1.substring(i) +" "+ s2.substring(0,s2.length()-i) +" "+res2); 
-				  if(res1 || res2) {return true;} }
-			  
-			  }
-	  
-	  }
-	  
-	  return false; }
+		if (n1 == n2) {
+			if (s1.equals(s2)) {
+				return true;
+			} else { // partition string to two substrings
+
+				for (int i = 1; i < n1; i++) { // find all scramble-substring combi using for-loop
+					boolean res1 = isScramble(s1.substring(0, i), s2.substring(0, i))
+							&& isScramble(s1.substring(i), s2.substring(i));
+					System.out.println(s1.substring(0, i) + " " + s2.substring(0, i) + " " + s1.substring(i) + " "
+							+ s2.substring(i) + " " + res1);
+
+					boolean res2 = isScramble(s1.substring(0, i), s2.substring(s2.length() - i))
+							&& isScramble(s1.substring(i), s2.substring(0, s2.length() - i));
+					System.out.println(s1.substring(0, i) + " " + s2.substring(s2.length() - i) + " " + s1.substring(i)
+							+ " " + s2.substring(0, s2.length() - i) + " " + res2);
+					if (res1 || res2) {
+						return true;
+					}
+				}
+
+			}
+
+		}
+
+		return false;
+	}
 
 	/**
 	 * @param args
@@ -76,10 +65,10 @@ public class ScrambleString {
 		String s2 = "rgtae";
 //		System.out.println("a"=="a");
 		boolean res = false;
-		if(s1 != s2) {
-			res= isScramble(s1, s2);
+		if (s1 != s2) {
+			res = isScramble(s1, s2);
 		}
-		System.out.println("String " +s1+" and "+s2+ " is scramble-string: "+ res);
+		System.out.println("String " + s1 + " and " + s2 + " is scramble-string: " + res);
 
 	}
 

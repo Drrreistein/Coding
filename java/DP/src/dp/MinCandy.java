@@ -1,5 +1,16 @@
 /**
- * 
+There are N children standing in a line. 
+Each child is assigned a rating value.
+You are giving candies to these children 
+subjected to the following requirements:
+
+Each child must have at least one candy.
+Children with a higher rating get more candies than their neighbors.
+What is the minimum candies you must give?
+ÊäÈë
+[1,2,2]
+Êä³ö
+4
  */
 package dp;
 
@@ -17,7 +28,7 @@ public class MinCandy {
 		candy[0] = 1; // initialize first candy number 
 		
 		for(int i=1; i<n; i++) {
-			if(ratings[i] > ratings[i-1]) {
+			if(ratings[i] > ratings[i-1]) { // 
 				candy[i] = candy[i-1]+1;
 			}
 			else if(ratings[i] == ratings[i-1]) {
@@ -78,7 +89,7 @@ public class MinCandy {
             }
         }
          
-        for(int i = 0; i < len; i++){ // sum fo candies
+        for(int i = 0; i < len; i++){ // sum of candies
             sum += dp[i];
         }
          
