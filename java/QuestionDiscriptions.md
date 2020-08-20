@@ -90,6 +90,14 @@ very cool
 
 08/20 # succeed one round
 
+08/20 # succeed finally
+
 判断是否存在这样的圆，经过所有的边；如果有，起点终点是？输出所有的可能。
 
 <img src="C:\Users\18817\AppData\Roaming\Typora\typora-user-images\image-20200819232341776.png" alt="image-20200819232341776" style="zoom:18%;" />
+
+### PermutationSequence
+
+输出一端字符串全组合排列，特定位置的组合
+
+two methods implemented
