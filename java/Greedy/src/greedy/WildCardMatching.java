@@ -1,3 +1,5 @@
+package greedy;
+
 /** '?'and'*'.的通配符模式匹配
 '?' 列（匹配任何单个字符）。
 '*' 列（匹配任何字符序列）。
@@ -20,35 +22,7 @@ isMatch("aab", "c*a*b") → false
  */
 import java.util.*;
 public class WildCardMatching {
-	/**
-	 * nowcoder version, dont understand
-	 * @return boolean
-	 * @param String s, 
-	 * @param String p, String with wildcard
-		
-		*/
-    public static boolean isMatch2(String s, String p) {
-        int i = 0, j = 0;
-        int iStar = -1, jStar = -1;
-        int m = s.length(), n = p.length();
-        while (i < m) {
-            if (j < n && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?')) {
-                ++i; ++j;// 两个字符串检测位置都右移一位
-            } else if (j < n && p.charAt(j) == '*') {
-                iStar = i;
-                jStar = j++;// 
-            } else if (iStar >= 0) {
-                i = ++iStar;
-                j = jStar + 1;
-            } else return false;
-        }
-        while (j < n && p.charAt(j) == '*') ++j;
-        return j == n;
-    }
 
-	/*
-	 * my version    
-	*/
 	public static boolean isMatch(String s, String p) {
 //		return match(s,p) || match(p,s);
 		return match(p,s);
@@ -115,7 +89,7 @@ public class WildCardMatching {
 		lp.add("*"); lp.add("a*");lp.add("?*");lp.add("c*a*b");
 		
 		for(int i=0; i<ls.size(); i++) {
-			System.out.println(isMatch2(ls.get(i), lp.get(i)));
+			System.out.println(isMatch(ls.get(i), lp.get(i)));
 			
 		}
 	}

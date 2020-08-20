@@ -129,3 +129,49 @@ public static void displayArray(int[] arr) {
 		System.out.println();
 	}
 ```
+
+---
+
+java 回溯算法中的形参变量的手动恢复
+
+在回溯算法的递归过程中，一个变量作为函数形参进入到函数里面再出来之后，它的值都会被函数改变。因此当其再次回到当前递归层次时，需要手动恢复该变量进入函数体之前的值
+
+```java
+public static void backTracking(int start, String s ,ArrayList<int[]> edge) {
+    // tmp的值不用手动恢复：因为他是每次递归的时候重新定义的变量。
+    // 不是edge作为初始的形参变量
+	String tmp = s.concat(Integer.toString(start));
+	if(edge.size()==0) {
+		edgeList.add(tmp);
+	}
+	else {
+		for(int i=0; i<edge.size(); i++) {
+			if(start == edge.get(i)[0] || start == edge.get(i)[1]) {
+				int newStart = start;
+				if(start == edge.get(i)[0] ) {
+					newStart = edge.get(i)[1];
+				}else{
+					newStart = edge.get(i)[0];
+				}
+				int[] arr = edge.get(i); 
+				edge.remove(i);
+				backTracking(newStart, tmp, edge);
+                
+				edge.add(i, arr);// ***手动恢复edge在下一次递归前的值
+			}
+		}
+	}
+}
+```
+---
+
+java data structures, 
+
+Hashtable<key, value>
+
+Differences btw. Hashtable and HashMap (注意二者的正确写法)
+
+1. HashMap is non synchronized. It is not-thread safe and can’t be shared between many threads without proper synchronization code whereas Hashtable is synchronized. It is thread-safe and can be shared with many threads.??
+2. **HashMap allows one null key and multiple null values** whereas Hashtable doesn’t allow any null key or value.
+3. HashMap is generally preferred over HashTable if thread synchronization is not needed
+

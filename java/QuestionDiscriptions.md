@@ -41,6 +41,10 @@ S = "ABCDE", T="AEC"， 返回0。
 
 给一排不同ratings的孩子分糖，要求发的糖最少。两个方法
 
+### MinDistanceOfWords
+
+返回两个单词的最近距离。
+
 ### PartitionPalindrome (not finished)
 
 分割字符串s为多个回文串的最简分割方法，return int
@@ -57,3 +61,35 @@ S = "ABCDE", T="AEC"， 返回0。
 
 判断字符串s是否可有字典dict中的单词组合而成， not succeed in nowcoder because running out of time
 
+## Greedy
+
+### WildCardMatching (not finished)
+
+通配符匹配，
+
+## BackTrack
+
+### RestoreIPAdresses
+
+将包含数字的字符串转化为IP的形式
+
+"25525511135",
+返回["255.255.11.135", "255.255.111.35"].
+
+### PermutationRemoveDuplicates
+
+找到一个列表元素所有不同的排列组合。
+
+{1, 1, 2}  ->  {1, 1, 2}, {1, 2, 1上}, {2, 1, 1}
+
+### SolveSudoku (copied)
+
+very cool
+
+### EulerKreis
+
+08/20 # succeed one round
+
+判断是否存在这样的圆，经过所有的边；如果有，起点终点是？输出所有的可能。
+
+<img src="C:\Users\18817\AppData\Roaming\Typora\typora-user-images\image-20200819232341776.png" alt="image-20200819232341776" style="zoom:18%;" />
