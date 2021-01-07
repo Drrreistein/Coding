@@ -36,6 +36,9 @@ int main(){
     vector<int> second (4,100);DisplayVector(second);                       // four ints with value 100
     vector<int> third (second.begin(),second.end());DisplayVector(third);  // iterating through second
     vector<int> fourth (third);DisplayVector(fourth);                       // a copy of third
+    int m,n;
+    cin >> "intput m, n: " >>m>>n;
+    vector<vector<int>> mat(m,n);
     // the iterator constructor can also be used to construct from arrays:
     int myints[] = {16,2,77,29};
     vector<int> fifth (myints, myints + sizeof(myints) / sizeof(int) );DisplayVector(fifth);
