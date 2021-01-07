@@ -11,7 +11,7 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "D:\\MinGW\\bin"
+                "cwd": "D:\\mingw\\bin"
             },
             "problemMatcher": [
                 "$gcc"
@@ -22,7 +22,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file ver(1)",
-            "command": "D:\\MinGW\\bin\\g++.exe",
+            "command": "D:\\mingw\\bin\\g++.exe",
             "args": [
                 "-g",
                 "${file}",
@@ -30,7 +30,7 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "D:\\MinGW\\bin"
+                "cwd": "D:\\mingw\\bin"
             },
             "problemMatcher": [
                 "$gcc"
@@ -41,7 +41,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file ver(2)",
-            "command": "D:\\MinGW\\bin\\g++.exe",
+            "command": "D:\\mingw\\bin\\g++.exe",
             "args": [
                 "-g",
                 "${file}",
@@ -49,7 +49,7 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "D:\\MinGW\\bin"
+                "cwd": "D:\\mingw\\bin"
             },
             "problemMatcher": [
                 "$gcc"
