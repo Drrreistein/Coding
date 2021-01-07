@@ -23,26 +23,17 @@ public:
          * methods: two pointer
          * time:O()
          */
-        int p=0,q=1;
+        int len = height.size();
+        int l=0,r=len-1;
         int ans=0;
-        for (int i = 2; i < height.size(); i++)
-        {
-            int area1 = (i-p) * min(height[i], height[p]);
-            int area2 = (i-q) * min(height[i], height[q]);
-            if(area2>area1){
-                if(area2>ans){
-                    p=q;
-                    ans=area2;
-                }
+        while(l<r){
+            cout << "l: " << l << " r: " << r << " area: "<< ans <<endl;
+            ans = max(ans, min(height[l],height[r])*(r-l));
+            if(height[l]<height[r]){
+                l++;
             }else{
-                if(area1>ans){
-                    ans=area1;
-                }
+                r--;
             }
-            if(height[i]>height[q]){
-                q=i;
-            }
-            
         }
         return ans;
     }
@@ -50,18 +41,17 @@ public:
     int solu2(vector<int>& height){
         int len= height.size();
         int ans=0;
-        for (int i = 0; i < len-1; i++)
+        for (int i = 0; i < len; i++)
         {
-            for(int j = i+1; j < len; j++){
+            for(int j = i; j < len; j++){
                 int area=(j-i)*min(height[i],height[j]);
-                cout << area<<endl;
+                // cout << area<<endl;
                 if(area > ans){
                     ans=area;
                 }
             }
-            return ans;
         }
-        
+        return ans;
     }
 
 };
