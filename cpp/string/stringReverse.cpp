@@ -2,6 +2,7 @@
 using namespace std;
 #include <string>
 #include <algorithm>
+
 int main(){
     string str;
     while(getline(cin, str)){
