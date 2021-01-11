@@ -1,21 +1,10 @@
-string str;
-   int count[256]={0};
-   
-   while(getline(cin, str)){
-       int max=0;
-       for(int i=0; i<str.length(); i++){
-           count[str.at(i)]++;
-           if(count[str.at(i)]>max){
-               max = count[str.at(i)];
-           }
-       }
-       while(max){
-            for(int i=0; i<256; i++){
-                if(count[i]==max)
-                printf("%c",i);
-            }
-            max--;
-       }
-       printf("\n");
-       
-   }
+D:\zwtymj\xccb\ljj\cqzlyaszjvlsjmkwoqijggmybr 645
+E:\je\rzuwnjvnuz 633
+C:\km\tgjwpb\gy\atl 637
+F:\weioj\hadd\connsh\rwyfvzsopsuiqjnr 647
+E:\ns\mfwj\wqkoki\eez 648
+D:\cfmwafhhgeyawnool 649
+E:\czt\opwip\osnll\c 637
+G:\nt\f 633
+F:\fop\ywzqaop 631
+F:\yay\jc\ywzqaop 631
